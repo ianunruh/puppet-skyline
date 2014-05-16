@@ -14,7 +14,7 @@ class { 'skyline':
 
 If Carbon/Graphite/Oculus are on another host, then you need to do a bit more.
 
-```
+```pp
 class { 'skyline':
   canary_metric => 'carbon.agents.monitor-a.metricsReceived',
   graphite_host => '10.0.0.2',
