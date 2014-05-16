@@ -39,4 +39,20 @@ class skyline::install inherits skyline {
     ensure => directory,
     owner => $user
   }
+
+  file { '/etc/init/skyline-analyzer.conf':
+    ensure => present,
+    content => template('skyline/skyline-analyzer.conf.erb')
+  }
+
+  file { '/etc/init/skyline-horizon.conf':
+    ensure => present,
+    content => template('skyline/skyline-horizon.conf.erb')
+  }
+
+  file { '/etc/init/skyline-webapp.conf':
+    ensure => present,
+    content => template('skyline/skyline-webapp.conf.erb')
+  }
+
 }
